@@ -1,0 +1,196 @@
+<!DOCTYPE html> <!--Specifies to browser the type of html to use-->
+
+<html>
+    
+    <!--Any markup with information about your page would go into the head tag.
+        Metadata elements, such as link, meta, title, and style, typically go inside the head element.
+    -->     
+    <head>
+        <title> Basic Html Elements</title>
+
+        <!--Heading Tags from h1 to h6. h1 is the biggest and h6 is the smallest-->
+        <h1> Heading 1 </h1>
+        <h2> Heading 2 </h2>
+        <h3> Heading 3 </h3>
+        <h4> Heading 4 </h4>
+        <h5> Heading 5 </h5>
+        <h6> Heading 6 </h6>
+    </head>
+
+    <!--Any markup with the content of the page (what displays for a user) would go into the body tag.-->
+    <body>
+        <!--Paragraph tag. Used to write large chunks of text-->
+        <p> 
+            Paragraph using the "p" tag. The text can be anything.Contrary to popular belief, Lorem Ipsum is not simply random text. 
+            It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. 
+            Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, 
+            consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the 
+            undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" 
+            (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, 
+            very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", 
+            comes from a line in section 1.10.32.
+        </p>
+
+        <!--
+            Main tag specifies the main content of the page. It helps search engines and other developers find the main content 
+            of the webpage. The content should not be repeated across other elements. There should only be one main tag. 
+            The <main> element must NOT be a descendant of an <article>, <aside>, <footer>, <header>, or <nav> element. 
+        -->
+        <main>
+            <!--Anchor Tag. Used to link from one page to another. Can also be used for interanl links. 
+                Can turn any element into a link. Its main attributes are
+                href : URL of the destination page (or) # if the URL isn't known.
+                target :_blank (Open in a new tab)
+                        _self (Open in the same frame) -> Default One
+                        framename (Open in speified frame)
+
+            -->
+            <a href = "https://www.pexels.com/search/cat/" target = "_blank"> Cat photos </a>
+            
+            <!--Image tag. Used to define images on the webpage. It has two attributes
+                src : URL of the image and 
+                alt : Alternate text if the image can't be displayed 
+            -->
+            <br>
+            <img src = "https://bit.ly/fcc-relaxing-cat" alt = "Neko">
+            <br>
+            <a href = "#para" target = "_self"> Jump to last paragraph (Internal link)</a>
+            
+            <p>
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+                The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, 
+                content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum 
+                as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. 
+                Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+            </p>
+
+            <!--Unordered List.
+                Uses bullet points.
+                li tag is used to define a list item
+            -->
+            <ul>
+                <li> Item 1</li>
+                <li> Item 2</li>
+                <li> Item 3</li>
+                <li> Item 4</li>
+            </ul>
+
+            <!--Ordered List.
+                Uses numbers.
+                li tag is used to define a list item
+            -->
+            <ol>
+                <li> Item 1</li>
+                <li> Item 2</li>
+                <li> Item 3</li>
+                <li> Item 4</li>
+            </ol>
+
+            
+            <!--Form Tag. Used to build web forms and submit that data to a server. Its attributes are
+                action : URL, where to send the form data
+                name : Name of the form
+            -->
+            <form name = "Random Form" action = "/URL of the server" target = "_blank">
+
+                <!--Text field. 
+                    Can be used to input text from the user. Its attributes are
+                    type : Type of input (text,time,URL,color,password,image etc...)
+                    placeholder : Hint that describes the expected value   
+
+                    required : Will not be able to submit without filling that field
+                -->
+                <input type = "text" required placeholder = "Enter Text here">
+                <input type = "text" placeholder = "Enter text">
+
+                <!--Button Tag. It has two attributes
+                    type : button (Clickable button)
+                        reset (Resets form data)
+                        submit (Submits form data to the URL specified in the form action)
+                -->
+                <button type = "submit"> Submit </button>
+                <button type = "reset"> Reset </button>
+                
+                <!--Radio Buttons in the form-->
+
+                <!--If you click the label, it puts focus on the input box. It provides a usability improvement for mouse users 
+                    because if the user clicks on the text within the <label> element, it toggles the control.
+                    It has one important attribute
+                    for : It should be equal to the id attribute of the input element to bind them together.
+                -->
+                <div>
+                        <br>
+                    <label for = "Cat"> 
+                        <!--Radio Buttons are a type of input.
+                            All related radio buttons need to have the same name to create a group. 
+                            checked : Can be used to check the button by default   
+                        -->
+                        <input id = "Cat" type = "radio" name = "cat-dog" checked> Cat </label>
+                    
+                    <label for = "Dog">
+                        <!--Radio Buttons are a type of input.
+                            All related radio buttons need to have the same name to create a group.    
+                        -->       
+                        <input id = "Dog" type = "radio" name = "cat-dog"> Dog <br> </label>
+                        <br> <!--Line break tag-->
+                </div>
+                
+                <!--Div tags aka division tag is a container element.
+                    it has a line break before and after it by default.
+                -->
+                <div>
+                    <!--Checkboxes in the form-->
+                    <label for = "Cat_love"> 
+                        <!--Checkboxes are a type of input.
+                            All related radio buttons need to have the same name to create a group.    
+                        -->
+                        <input id = "Cat_love" type = "checkbox" name = "love"> Love Cats <br> </label>
+                            
+                    <label for = "Dog_love">
+                        <!--Checkboxes are a type of input.
+                            All related radio buttons need to have the same name to create a group.    
+                        -->       
+                        <input id = "Dog_love" type = "checkbox" name = "love"> Love Dogs <br> </label>
+                        
+                    <label for = "Love_both">
+                        <!--Checkboxes are a type of input.
+                            All related radio buttons need to have the same name to create a group. 
+                            checked : Can be used to check the button by default     
+                        -->       
+                        <input id = "Love_both" type = "checkbox" name = "love" checked> Love Both <br> </label>
+                </div>
+                    
+            </form>
+
+            <p>
+                Vestibulum et leo suscipit, pellentesque lacus eu, vestibulum velit. Sed auctor ligula ipsum, vel finibus nisi aliquet et. 
+                Donec augue purus, ultricies in posuere eget, condimentum a felis. Vivamus et volutpat odio. Duis commodo pulvinar diam, 
+                aliquet mattis lectus fringilla vel. Donec sagittis lobortis nibh, sed condimentum nulla commodo quis. Donec porta, lectus et 
+                aliquet ultricies, nibh nunc feugiat nunc, at lacinia dui nulla id felis. Vestibulum sed massa ornare, imperdiet elit ut, pharetra 
+                nulla. Maecenas condimentum consequat mi vehicula facilisis. Cras sed lectus nisl. Vivamus porta magna sed libero consequat, 
+                a imperdiet odio scelerisque. Quisque in posuere lorem, luctus malesuada elit.
+            </p>
+
+            <p>
+                Aliquam lacinia nibh et convallis ornare. Etiam posuere, est quis sodales dictum, leo lacus sodales nisi, ut commodo eros elit 
+                quis erat. Vestibulum pulvinar, mauris vel tincidunt iaculis, turpis ligula auctor tortor, eget lacinia ipsum mauris sed lorem. 
+                Duis laoreet, augue vel condimentum rhoncus, odio massa varius diam, vitae pellentesque nunc urna eget felis. Nulla facilisi. 
+                Suspendisse potenti. Vivamus consectetur imperdiet cursus. Quisque id sem ut felis dictum gravida. Donec aliquam mattis lacus, 
+                sed condimentum elit tristique eu. Pellentesque interdum felis ut mauris mollis scelerisque. Vivamus ut interdum leo. 
+                Duis elementum fringilla leo vitae aliquam.
+            </p>
+
+            <p id = "para">
+                Aliquam lacinia nibh et convallis ornare. Etiam posuere, est quis sodales dictum, leo lacus sodales nisi, ut commodo eros elit 
+                quis erat. Vestibulum pulvinar, mauris vel tincidunt iaculis, turpis ligula auctor tortor, eget lacinia ipsum mauris sed lorem. 
+                Duis laoreet, augue vel condimentum rhoncus, odio massa varius diam, vitae pellentesque nunc urna eget felis. Nulla facilisi. 
+                Suspendisse potenti. Vivamus consectetur imperdiet cursus. Quisque id sem ut felis dictum gravida. Donec aliquam mattis lacus, 
+                sed condimentum elit tristique eu. Pellentesque interdum felis ut mauris mollis scelerisque. Vivamus ut interdum leo. 
+                Duis elementum fringilla leo vitae aliquam.
+            </p>
+        </main>
+
+    </body>
+
+</html>
