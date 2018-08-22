@@ -3,6 +3,7 @@
 <html>
     <head>
         <h1 class = "red_text">CatPhotoApp</h1>
+
         <!--Link tag is used to link external files to the html file.
             The files can be a .css .js etc..
         -->
@@ -16,8 +17,13 @@
     <body>
         <main>
         <p>Click here to view more <a href="#">cat photos</a>.</p>
-        
-        <a href="#"><img class="large-image red-border-circular" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+        <!--To apply multiple class attributes -> class="class1 class2"
+            Note 1 : If there is a conflict, attributes of class 2 will take precedence over attributes of class 1 
+            Note 2 : If the element has an id, its attibutes with take precedence no matter what
+            Note 3 : Inline styles override all CSS declartions
+            Note 4 : To prevent these overrides use " !important " with the attribute you want (Refer to small-image class in the CSS file)
+        -->
+        <a href="#"><img id = "large-image" class="small-image red-border-circular" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
         
         <div>
             <p>Things cats love:</p>
@@ -44,7 +50,7 @@
             <button type="submit">Submit</button>
         </form>
 
-        <!-- Uncomment Elements here are to see effects of changing padding and margin-->
+        <!-- Uncomment the elements here are to see effects of changing padding and margin -->
         <!--
             <h5 class="injected-text">margin</h5>
 
@@ -56,5 +62,4 @@
 
         </main>
     </body>
-
 </html>

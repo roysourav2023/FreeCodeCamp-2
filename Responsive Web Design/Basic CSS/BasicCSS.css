@@ -1,5 +1,6 @@
+/* Element Selector */
+
 /* To change attributes of all the elements with same tag use that particular tag name */
-/* Elements within head and body tags can also be changed the same way */
 p {
     color : magenta;
     font-size: 20px;
@@ -9,12 +10,22 @@ p {
 div {
     color : teal;
     font-family: sans-serif;
+    /* px (Pixel) is a length unit
+       There are two kinds of length units -
+       Absolute : Actual Measurements on screen (in,mm) (Depends on screen resolution)
+       Relative : Measured relative to another length value (em,rem) (em is based on element's/parent's font-size) */
+    font-size : 1.5em;
 }
 
+/* Head and Body can also be changed in the same way */
+/* All other elements will inherit body element's styles if nothing specific for that element is mentioned*/
 body {
     background-color : silver;
+    /* Red font color is applied to p element if it is commented above*/
+    color : red;
 }
 
+/* Class Selector */
 
 /* Use . with a class name and later assign the class name to the elements which you want to change */
 /* Multiple elements can have the same class name */
@@ -29,24 +40,30 @@ body {
     color : red;
 }
 
-.large-image {
-    width : 200px;
+.small-image {
+    width : 50px !important;
 }
 
+
 .green-border{
-    border-color : green;
+    /* We can also use hex code to represent colors -> #00FF00 (or) #0F0 */
+    border-color : #00FF00;
     border-width : 10px;
     border-style : solid;
     border-radius : 20px; 
 }
 
 .red-border-circular{
-    border-color : red;
+    /* Another way of representing colors is using rgb(255,0,0)*/
+    border-color :rgb(255,0,0);
     border-width : 10px;
     border-style : solid;
     /* Border radius of 50%, makes the border perfectly circular. */
     border-radius : 50%; 
+    width : 100px;
 }
+
+/* ID Selector */
 
 /* Use # with an id and later assign this id to the element which you want to change */
 /* Id name should be unique (Convention) */
@@ -56,8 +73,13 @@ body {
     background-color : white;
 }
 
-/* Another kind of CSS selector is the attribute selector used as [attribute = "value"] */
+#large-image {
+    width : 200px;
+}
 
+/* Attribute Selector */
+
+/* Another kind of CSS selector is the attribute selector used as [attribute = "value"] */
 /* Changes the margins of all elements with the attribute type and a corresponding value of checkbox */
 [type ="checkbox"] {
     margin-top : 10px;
