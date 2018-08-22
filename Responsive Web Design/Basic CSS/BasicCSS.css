@@ -1,0 +1,127 @@
+/* To change attributes of all the elements with same tag use that particular tag name */
+/* Elements within head and body tags can also be changed the same way */
+p {
+    color : magenta;
+    font-size: 20px;
+    font-family: Lobster,monospace;
+}
+
+div {
+    color : teal;
+    font-family: sans-serif;
+}
+
+body {
+    background-color : silver;
+}
+
+
+/* Use . with a class name and later assign the class name to the elements which you want to change */
+/* Multiple elements can have the same class name */
+
+/* Attributes of an element with the class name blue_text */
+.blue_text {
+    color : blue;
+}
+
+/* Attributes of an element with the class name red_text */
+.red_text {
+    color : red;
+}
+
+.large-image {
+    width : 200px;
+}
+
+.green-border{
+    border-color : green;
+    border-width : 10px;
+    border-style : solid;
+    border-radius : 20px; 
+}
+
+.red-border-circular{
+    border-color : red;
+    border-width : 10px;
+    border-style : solid;
+    /* Border radius of 50%, makes the border perfectly circular. */
+    border-radius : 50%; 
+}
+
+/* Use # with an id and later assign this id to the element which you want to change */
+/* Id name should be unique (Convention) */
+
+/* Attributes of an element with the id cat-photo-form */
+#cat-photo-form {
+    background-color : white;
+}
+
+/* Another kind of CSS selector is the attribute selector used as [attribute = "value"] */
+
+/* Changes the margins of all elements with the attribute type and a corresponding value of checkbox */
+[type ="checkbox"] {
+    margin-top : 10px;
+    margin-bottom : 15px; 
+  }
+
+/* Three important properties control the space that surrounds each HTML element: 
+    Padding : Used to create distance between content and border of an element
+    Border
+    Margin : Used in an element to create distance between that element and other elements of page
+             (Distance between border and surrounding elements)
+
+    (Margin is not part of an element where padding is part of element)
+*/
+
+.injected-text {
+    margin-bottom: -25px;
+    text-align: center;
+}
+    
+.box {
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    text-align: center;
+}
+    
+.yellow-box {
+    background-color: yellow;
+    padding: 10px;
+}
+
+.blue-box {
+    background-color: blue;
+    color: #fff;
+    padding: 20px;
+    /*When you increase the margin, it will increase the distance between its border and surrounding elements.*/
+    /*If you set an element's margin to a negative value, the element will grow larger.*/
+
+    /* 
+        margin : -15px; 
+    */
+
+    /* We can control the padding of all four individual sides of an element */
+    /* Short hand for this is margin: top right bottom left 
+       i.e. margin: 40px 20px 20px 40px; is the same as below */
+    margin-top: 40px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+
+.red-box {
+    background-color: crimson;
+    color: #fff;
+
+    /* We can control the padding of all four individual sides of an element */
+    /* Short hand for this is padding: top right bottom left 
+       i.e. padding: 40px 20px 20px 40px; is the same as below */
+    padding-top: 40px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+
+    margin : 20px;
+}
+    
