@@ -2,6 +2,7 @@ CSS BOX Model -
     CSS treats each element as its own box. The default layout is called the normal flow. 
 
 Different position types -
+    
     1) Relative
         When the position of an element is set to relative,it allows you to specify how CSS should move it relative to 
         its current position in the normal flow of the page. It pairs with the CSS offset properties of 
