@@ -5,8 +5,7 @@ Different position types -
     1) Relative
         When the position of an element is set to relative,it allows you to specify how CSS should move it relative to 
         its current position in the normal flow of the page. It pairs with the CSS offset properties of 
-        left or right, and top or bottom.
-       
+        left or right, and top or bottom.       
         Changing an element's position to relative does not remove it from the normal flow - other elements around it 
         still behave as if that item were in its default position.
         
