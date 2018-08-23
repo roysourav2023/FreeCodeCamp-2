@@ -101,6 +101,9 @@ body {
 }
     
 .box {
+    /* Shorthand for the statements below is
+       border: border-width border-style border-color -> border: 5px solid #000 
+    */
     border-style: solid;
     border-color: black;
     border-width: 5px;
@@ -126,6 +129,10 @@ body {
     /* We can control the padding of all four individual sides of an element */
     /* Short hand for this is margin: top right bottom left 
        i.e. margin: 40px 20px 20px 40px; is the same as below */
+    /* Alternate ways of doing this
+       - margin: top (left,right) bottom -> margin: 10px 5px 15px;
+       - margin: (top,bottom) (left,right) -> margin: 10px 5px
+    */
     margin-top: 40px;
     margin-right: 20px;
     margin-bottom: 20px;
@@ -139,6 +146,10 @@ body {
     /* We can control the padding of all four individual sides of an element */
     /* Short hand for this is padding: top right bottom left 
        i.e. padding: 40px 20px 20px 40px; is the same as below */
+    /* Alternate ways of doing this
+       - padding: top (left,right) bottom -> padding: 10px 5px 15px;
+       - padding: (top,bottom) (left,right) -> padding: 10px 5px
+    */
     padding-top: 40px;
     padding-right: 20px;
     padding-bottom: 20px;
