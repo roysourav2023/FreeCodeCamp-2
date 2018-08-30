@@ -67,19 +67,13 @@
     border-radius: 30% 30% 120% 30%;
     transform: rotate(130deg);
     z-index: -1;
-    /* To create waving animation*/
     animation-duration: 3s;
     animation-name: wave;
     animation-iteration-count: infinite;
     transform-origin:0% 0%;
     animation-timing-function: linear;
   }
-  
-  /*Animation definition 
-    @keyframes rule specifies the animation 
-    The animation is created by gradually changing from one set of CSS styles to another.
-    0% is the beginning of the animation, 100% is when the animation is complete.
-  */
+
   @keyframes wave {
       10% {
         transform: rotate(110deg);
