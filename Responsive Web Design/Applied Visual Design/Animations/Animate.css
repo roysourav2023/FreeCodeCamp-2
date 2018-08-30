@@ -1,0 +1,159 @@
+div {
+    height: 40px;
+    width: 70%;
+    background: black;
+    margin: 50px auto;
+    border-radius: 5px;
+  }
+
+#rect:hover {
+    animation-name: rainbow;
+    animation-duration: 5s;
+    /* The animation-fill-mode specifies the style applied to an element when the animation has finished */
+    animation-fill-mode: forwards;
+}
+
+/* Animation definition 
+   @keyframes rule specifies the animation 
+   The animation is created by gradually changing from one set of CSS styles to another.
+   0% is the beginning of the animation, 100% is when the animation is complete.
+   Can also use from(0%) and to(100%)
+*/
+@keyframes rainbow {
+    0% {
+      background-color: violet;
+    }
+    16% {
+      background-color: indigo;
+    }
+    32% {
+      background-color: blue;
+    }
+    50% {
+        background-color: green;
+    }
+    66% {
+        background-color: yellow;
+    }
+    84% {
+        background-color: orange;
+    }
+    100% {
+        background-color: red;
+    }
+}
+  
+
+#move {
+    position: relative;
+    
+    animation-name: zigzag;
+    animation-duration: 4s;
+}
+  
+  @keyframes zigzag {
+    0% {
+      background-color: blue;
+      top: 0px;
+      left: 0px;
+      
+    }
+    50% {
+      background-color: green;
+      top: 50px;
+      left: 25px;
+      
+    }
+    100% {
+      background-color: yellow;
+      top: 0px;
+      left: -25px;
+      
+    }
+}
+
+ #ball1 {
+    width: 70px;
+    height: 70px;
+    margin: 50px auto;
+    position: fixed;
+    left: 20%;
+    top: 25%;
+    border-radius: 50%;
+    background: red;
+
+    animation-name: fade1;
+    animation-duration: 5s;
+}
+
+@keyframes fade1 {
+    50% {
+      left: 80%;
+      opacity: 0.1;  
+
+      /* This property controls how quickly an animated element changes over the duration of the animation.
+         linear: Constant animation speed
+         ease-out: Quick in the beginning then slows down
+         ease-in: Slow in the beginning then speeds up
+         ease: Starts slow, speeds up in the middle then slows down again in the end
+      */
+      animation-timing-function: linear;  
+    }
+}
+
+#ball2 {
+    width: 70px;
+    height: 70px;
+    margin: 50px auto;
+    position: fixed;
+    left: 20%;
+    top: 50%;
+    border-radius: 50%;
+    background: blue;
+
+    animation-name: fade2;
+    animation-duration: 5s;
+}
+
+@keyframes fade2 {
+    50% {
+      left: 80%;
+      opacity: 0.1;  
+
+      /* The cubic-bezier function consists of four main points that sit on this 1 by 1 grid: P0, P1, P2, and P3
+         P0 is (0, 0) and represents the initial time and the initial state,
+         P3 is (1, 1) and represents the final time and the final state.
+         Values of P1,P2 dictates the shape of the curve for the animation to follow.
+         In CSS, the syntax is (x1,y1,x2,y2) ->  (x1,y1) correspond to the location of P1 and (x2,y2) correspond to the location of P2 
+      */
+    /* For linear animation -> animation-timing-function: cubic-bezier(0.25,0.25,0.75,0.75); */
+    animation-timing-function: cubic-bezier(0,0,0.58,1); /* For ease-out */
+    }
+}
+
+#ball3 {
+    width: 100px;
+    height: 100px;
+    margin: 50px auto;
+    position: relative;
+    border-radius: 50%;
+    background: linear-gradient(35deg,#ccffff,#ffcccc);
+
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-iteration-count: infinite; /* For a never ending animation */
+}
+
+@keyframes bounce{
+    0% {
+      top: 0px;
+    }
+    50% {
+      top: 249px;
+      width: 130px;
+      height: 70px;
+    }
+    100% {
+      top: 0px;
+    }
+}

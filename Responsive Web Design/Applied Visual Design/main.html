@@ -7,33 +7,51 @@
     </head>
 
     <body>
-        <div class="fullCard" id = "thumbnail">
-            <div class="cardContent">
-                <div class="cardText">
-                    <h4><s>google</s> alphabet</h4>
-                    <!-- s tag is used to strikethrough text -->  
+        <div>
+            <!-- aside tag is used here to create a sidebar -->
+            <aside id = "left" class = "side">
+                <h4> Sidebar </h4>
+                <hr>
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                    <li>Item 4</li>
+                </ul>
+            </aside>
 
-                    <hr> <!-- hr tag is used to create horizontal lines to visually separate content -->
+            <div class="fullCard" id = "thumbnail">
+                <div class="cardContent">
+                    <div class="cardText">
+                        <h4><s>google</s> alphabet</h4>
+                        <!-- s tag is used to strikethrough text -->  
 
-                    <p>
-                        <em> Google was founded by Larry Page and Sergey Brin while they were 
-                        <u>Ph.D. students</u> at 
-                        <strong> Stanford University </strong>.
-                        <!-- Strong tag makes the text bold, it effectively applies font-weight: bold;  
-                             u tag underlines text, its CSS equivalent is text-decoration: underline  
-                             em tag is to italicize text, its CSS equivalent is font-style: italic;                        
-                        -->
-                        </em>
-                    </p>
-                </div>
+                        <hr> <!-- hr tag is used to create horizontal lines to visually separate content -->
 
-                <div class="cardLinks">
-                    <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a>
-                    <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
+                        <p>
+                            <em> Google was founded by Larry Page and Sergey Brin while they were 
+                            <u>Ph.D. students</u> at 
+                            <strong> Stanford University </strong>.
+                            <!-- Strong tag makes the text bold, it effectively applies font-weight: bold;  
+                                u tag underlines text, its CSS equivalent is text-decoration: underline  
+                                em tag is to italicize text, its CSS equivalent is font-style: italic;                        
+                            -->
+                            </em>
+                        </p>
+                    </div>
+
+                    <div class="cardLinks">
+                        <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a>
+                        <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
+                    </div>
+
                 </div>
 
             </div>
 
+            <div class="moon"></div>
+
+            <div class = "heart"></div>
         </div>
     </body>
 </html>

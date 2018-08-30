@@ -23,3 +23,10 @@ Different position types -
     5) Sticky
         Theu are positioned based on the user's scroll position.
         It is positioned relative until a given offset position is met in the viewport then it "sticks" in place (like position:fixed).
+
+Z-index -
+
+    The z-index property can specify the order of how elements are stacked on top of one another.
+    Higher values for the z-index property of an element move it higher in the stack than those with lower values.
+
+

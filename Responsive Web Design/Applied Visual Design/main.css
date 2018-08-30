@@ -1,3 +1,8 @@
+body {
+    /* The background property supports the url() function in order to link to an image of the chosen texture or pattern */
+    background: url("https://i.imgur.com/MJAkxbh.png");
+}
+
 h4 {
     /* text-align: justify; causes all lines of text except the last line to meet the left and right edges of the line box.
        text-align: center; centers the text
@@ -5,7 +10,7 @@ h4 {
        text-align: left; (the default) left-aligns the text.
     */
     text-align: center; 
-    padding: 10px;
+    padding: 5px;
 
     /* rgba -> red green blue alpha(opacity) */
     background-color: rgba(45,45,45,0.1);  
@@ -28,11 +33,33 @@ p {
     
 }
 
+.side {
+    /* background: linear-gradient(gradient_direction, color 1, color 2, color 3, ...); is used to apply a linear gradient
+       The repeating-linear-gradient() function is very similar to linear-gradient() with the major difference that it repeats 
+       the specified gradient pattern
+
+       background: radial-gradient(circle/ellipse, start-color, ..., last-color); for a radial gradient
+    */
+    background: linear-gradient(35deg,#CCFFFF,#FFCCCC);
+    border: 1px solid #000;
+    border-radius: 5px;
+    max-width: 200px;
+    padding: 14px;
+    box-shadow: -6px 6px 6px rgba(0,0,0,0.40), 10px 10px 20px rgba(0,0,0,0.19);
+    z-index:1;
+}
+
+
 /* A pseudo-class is a keyword that can be added to selectors, in order to select a specific state of the element.
    In thios :hover can be used to style the state when the cursor is on the link
 */
 a:hover {
-    color:red;
+    /* hsl used to select colors
+       Hue - Similar to color (Spectrum with Red on left,Green in the middle,Blue on the right)
+       Saturation - Amount of gray in the color (0% being minimally saturated color and 100% being fully saturated)
+       Lightness - Amount of white or black (0% (black) to 100% (white), where 50% is the normal color)
+    */
+    color:hsl(0, 100%, 50%);
 }
 
 .links {
@@ -42,18 +69,27 @@ a:hover {
 }
 
 .fullCard {
-    border: 1px solid #CCC;
+    border: 1px solid #000;
     border-radius: 5px;
-    width: 350px; /* Sets the width of the element*/
+    max-width: 350px; /* Sets the width of the element*/
     /* height: 210px; Sets the height of the element*/   
-    margin: 10px 5px;
     padding: 4px;
+    /* Margin set to the value auto will center the element in */
+    margin: auto;
+    background: linear-gradient(35deg,#CCFFFF,#FFCCCC);
 }
 
+.fullCard:hover {
+    /* The transform property applies a 2D or 3D transformation to an element. 
+       This property allows you to rotate, scale, move, skew, etc., elements. 
+    */
+    transform: scale(1.1);
+}
 
 .cardContent {
     padding: 10px;
 }
+
 
 #thumbnail {
     /* Box shadow is used to add shadows to div elements
@@ -71,3 +107,76 @@ a:hover {
     /* The statement below create 2 shadows */
     box-shadow: 6px 6px 6px rgba(0,0,0,0.40), 10px 10px 20px rgba(0,0,0,0.19); 
 }
+
+#left{
+    /* Floating elements are removed from the normal flow of a document and pushed to either the 
+       left or right of their containing parent element.
+    */
+    float: left;
+    width: 15%;
+}
+
+/* Uncomment the code below to see crescent moon shape*/
+/* 
+.moon {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 25px 10px 0px 0px gray; 
+} 
+*/
+
+/* Uncomment the code below to see heart shape*/
+
+/* .heart {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: red;
+    height: 50px;
+    width: 50px;    
+    transform: rotate(-45deg);
+}
+*/
+
+/* A CSS pseudo-element is used to style specified parts of an element.
+    selector::pseudo-element {
+        property:value;
+    }
+*/
+
+/* The ::after pseudo-element can be used to insert some content after the content of an element. */
+/* .heart::after {
+    background-color: red;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    left: 25px;
+}
+
+/* The ::before pseudo-element can be used to insert some content before the content of an element. */
+/* .heart::before {
+    content: "";
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 0px;
+} 
+*/
