@@ -1,0 +1,41 @@
+/* Two accessibility issues arising from usage of color - 
+   1) Color alone should not be used as the only way to convey important information because screen reader users won't see it. 
+   2) Foreground and background colors need sufficient contrast so colorblind users can distinguish them.
+      ( The WCAG-recommended contrast ratio of 4.5:1 )
+*/
+body {
+    color: #000; /* Change to #D3D3D3 for low contrast */
+    background-color: #FFF;
+}
+
+
+/* Hide an element to all devices except screen readers with the class sr-only.
+
+/* sr-only class as per FreeCodeCamp */
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    top: auto;
+    overflow: hidden;
+}
+
+/* Another variant of the sr-only class.
+   Overflow - The overflow property specifies what should happen if content overflows an element's box.   
+   Clip - The clip property lets you specify a rectangle to clip an absolutely positioned element.
+          The clip property does not work if "overflow:visible".    
+*/
+/*
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden; 
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+*/

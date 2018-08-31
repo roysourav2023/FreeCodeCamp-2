@@ -1,0 +1,223 @@
+<!--A great resource for your projects going forward is the W3 Consortium's Web Content Accessibility Guidelines (WCAG). 
+    They set the international standard for accessibility and provide a number of criteria you can use to check your work.
+-->
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Applied Accessibility</title>
+        <link rel = "stylesheet" type = "text/css" href = "main.css">
+    </head>
+
+    <body>
+        <!--Header is used to wrap introductory information or navigation links for its parent tag. -->
+        <header>
+            <!-- Have only one h1 tag per page which defines the main content of the page -->
+            <h1>How to Become a Ninja</h1>
+
+            <!-- The nav tag defines a set of navigation links. Browsers, such as screen readers for disabled users, can use 
+                 this element to determine whether to omit the initial rendering of this content.
+             -->
+            <nav>
+                <ul>
+                    <li><a href="#stealth">Stealth &amp; Agility</a></li>
+                    <li><a href="#combat">Combat</a></li>
+                    <li><a href="#weapons">Weapons</a></li>
+                </ul>
+            </nav>
+              
+        </header>
+
+        <!--Main tag is used to encapsulate the main content of the page.
+            The main tag also has an embedded landmark feature that assistive technology can use to quickly navigate to the main content
+            i.e. the "Jump to Main Content" link at the top of a page.
+        -->
+        <main>
+            <form>
+                <p>Sign up to receive blog posts by email here!</p>                        
+                 
+                <!-- The for attribute on a label tag explicitly associates that label with the form control and is used by
+                     screen readers.
+                     The value of the for attribute must be the same as the value of the id attribute of the form control.
+                -->
+                <label for = "email">Email:</label>
+                <input type="text" id="email" name="email">                       
+                        
+                <input type="submit" name="submit" value="Submit">
+                
+                <!--  Time element along with a datetime attribute is used to standardize times. It is an inline element.
+                      The datetime attribute represent the machine-readable date/time. This encoding allows for search engines 
+                      to produce smarter results and also user agents can offer to add reminders or scheduled events to the calendar.
+                -->
+                <p> Tell us the best date for the competition. Last date for submission is  
+                    <time datetime="2018-09-3">Monday, September 3<sup>rd</sup></time> 
+                </p>
+
+                <label for = "pickdate">Preferred Date: </label>
+
+                <!--Depending on browser support, a date picker shows up in the input field when it's in focus, which makes filling in a 
+                    form easier for all users. For older browsers, the type will default to text, so it helps to show users the expected date 
+                    format in the label or as placeholder text just in case.
+                -->
+                <input type="date" id="pickdate" name="date">
+            </form>
+
+            <form>
+                <!--When tabindex is on a tag, it indicates that element can be focused on. 
+                    The value (an integer that's positive, negative, or zero) determines the behavior.
+                -->
+                <p tabindex = "0">
+                    Instructions: Fill in ALL your information then click Submit.
+                </p>
+                <!-- The fieldset tag is used to group related elements in a form. It draws a box around the related elements. -->
+                <fieldset>
+                    <!-- The legend tag defines a caption for the fieldset element. -->
+                    <legend>What level ninja are you?</legend>
+
+                        <input id="newbie" type="radio" name="levels" value="newbie">
+                        <label for="newbie">Newbie Kitten</label>
+                        <br>
+
+                        <input id="intermediate" type="radio" name="levels" value="intermediate">
+                        <label for="intermediate">Developing Student</label>
+                        <br>
+
+                        <input id="master" type="radio" name="levels" value="master">
+                        <label for="master">Master</label>
+                </fieldset>
+
+                <fieldset>
+                        <legend>Select your favorite weapons:</legend>
+
+                        <input id="stars" type="checkbox" name="weapons" value="stars">
+                        <label for="stars">Throwing Stars</label>
+                        <br>
+
+                        <input id="nunchucks" type="checkbox" name="weapons" value="nunchucks">
+                        <label for="nunchucks">Nunchucks</label>
+                        <br>
+
+                        <input id="sai" type="checkbox" name="weapons" value="sai">
+                        <label for="sai">Sai Set</label>
+                        <br>
+
+                        <input id="sword" type="checkbox" name="weapons" value="sword">
+                        <label for="sword">Sword</label>
+                        </fieldset>
+                        <br>
+                        <input type="submit" name="submit" value="Submit">
+            </form>
+
+            <h2>
+                <!--The accesskey attribute specifies a shortcut key to activate/focus an element.
+                    [Alt] + accesskey (or) [Alt] [Shift] + accesskey is the shortcut for most browsers.
+                -->
+                <a id="first" href="" accesskey="g">The Garfield Files: Lasagna as Training Fuel?</a>
+            </h2>
+            <!--  Article is a sectioning element, and is used to wrap independent, self-contained content -->
+            <article>
+                <p>
+                    The internet is littered with varying opinions on nutritional paradigms, from catnip paleo to hairball cleanses.
+                    But let's turn our attention to an often overlooked fitness fuel, and examine the protein-carb-NOM trifecta that is 
+                    lasagna...
+                </p>
+
+            </article>
+              
+            <h2>Learn the Art of Battle</h2>
+                <h3>How to Strengthen your Body</h3>
+                <h3>Audio Clip</h3>
+
+                <p>
+                    A sound clip of Zersiax's screen reader in action.
+                </p>
+
+                <!--The audio tag supports the controls attribute. It is a boolean attribute.
+                    This shows the browser default play, pause, and other controls, and supports keyboard functionality.
+                -->
+
+                <audio controls>
+                    <source src = "Media/screen-reader.mp3" type = "audio/mpeg"/>
+                    Your browser does not support audio. <!-- Only shown when the browser doesn't support audio.-->
+                </audio>
+
+                <!--The purpose of a figure caption is to add a visual explanation to an image. In HTML5, an image and a caption can be 
+                    grouped together in a <figure> element
+                -->
+                <figure>
+                    <img src="roundhouseDestruction.jpeg" alt="Roundhouse kick">
+                    <br>
+                    <figcaption>
+                        Master Camper Cat demonstrates proper form of a roundhouse kick.
+                    </figcaption>
+                </figure>
+            
+            <h2>Training Program</h2>
+                <!-- Table tag is used to define a HTML table -->
+                <table class="sr-only">
+                    <caption>Hours of Weekly Training in Stealth, Combat, and Weapons</caption>
+                    <!-- The thead tag is used to group header content in an HTML table -->
+                    <thead>
+                      <!-- Each table row is defined with the tr tag -->
+                      <tr>
+                        <!-- A table header is defined with the th tag.
+                             The scope attribute specifies whether header is for a column, row, or group of columns or rows.
+                             By default, table headings are bold and centered.
+                         -->
+                        <th></th>
+                        <th scope="col">Stealth &amp; Agility</th>
+                        <th scope="col">Combat</th>
+                        <th scope="col">Weapons</th>
+                        <th scope="col">Total</th>                                        
+                      </tr>
+                    </thead>
+
+                    <!-- The tbody tag is used to group the body content in an HTML table -->
+                    <tbody>
+                      <tr>
+                        <th scope="row">Week One</th>
+                        <!-- A table data/cell is defined with the td tag -->
+                        <td>3</td>
+                        <td>5</td>
+                        <td>2</td>
+                        <td>10</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Week Two</th>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>3</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Week Three</th>
+                        <td>4</td>
+                        <td>6</td>
+                        <td>3</td>
+                        <td>13</td>
+                      </tr>
+                    </tbody>
+
+                </table>
+            <h2>Learn the Art of Living with Honor</h2>
+                <h3>How to Breathe Properly</h3>
+                <h3>How to Simplify your Life</h3>
+        </main>
+        
+        <!-- alt text is used when the image can't be rendered for some reason
+             In situations when an image is already explained with text content, alt is set to an empty string
+        -->
+        <img src="doingKarateWow.jpeg" alt="image-text">
+
+        <!--A <footer> element typically contains
+            
+            - Authorship information
+            - Copyright information
+            - Contact information
+            - Sitemap
+            - Back to top links
+            - Related documents
+        -->
+        <footer>&copy; 2018 Camper Cat</footer>
+    </body>
+</html>
