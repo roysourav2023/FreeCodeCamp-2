@@ -20,7 +20,7 @@ section -
     
 article - 
         
-        It is a semantic element. Article groups independent, self-contained content.
+    It is a semantic element. Article groups independent, self-contained content.
 
 Tabindex -
 
