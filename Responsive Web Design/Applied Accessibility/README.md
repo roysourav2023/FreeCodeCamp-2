@@ -6,7 +6,7 @@ Screen Readers -
 
 Semantic Elements in a webpage - 
 
-    ![Semantic Elements](./Media/img_sem_elements.png)
+   ![Semantic Elements](./Media/img_sem_elements.png)
 
 When to use div, section and article -
 
