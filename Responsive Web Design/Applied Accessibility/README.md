@@ -1,27 +1,27 @@
-##Screen Readers
+## Screen Readers
 
     Screen readers can be set to read only the headings on a page so the user gets a summary. 
     To provide a semantic meaning,headings with equal (or higher) rank start new implied sections, headings with lower rank start subsections of the previous one.
 
-##Semantic Elements in a Webpage 
+## Semantic Elements in a Webpage 
 
    ![Semantic Elements](./Media/img_sem_elements.png)
 
-##When to use div, section and article
+## When to use div, section and article
 
-###div
+### div
 
     It is a non-semantic element. When there's no relationship between groups of content, then use a div.
 
-###section 
+### section 
     
     It is a semantic element. A section is for grouping thematically related content. They can be used within each other, as needed.The section tag defines sections in a document, such as chapters, headers, footers.
     
-###article
+### article
         
     It is a semantic element. Article groups independent, self-contained content.
 
-##tabindex
+## tabindex
 
     Certain elements, such as links and form controls, automatically receive keyboard focus when a user tabs through a page. 
     
