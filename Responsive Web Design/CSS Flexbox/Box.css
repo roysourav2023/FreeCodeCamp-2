@@ -1,0 +1,117 @@
+/* CSS for the boxes */
+
+#box-container {
+    background: gray;
+    display: flex;
+    height: 500px;
+
+    /* flex-direction is used to align the children of a container. It has four values -
+       row (default value): Align into rows
+       column: Align into columns
+       row-reverse
+       column-reverse   
+    */
+
+    flex-direction: row; /* Box-2 before Box-1*/
+
+    /* justify-content property is used to tell CSS how to align and space out the flex items a certain way.
+
+       flex-start: Aligns items to the start of the flex container
+       flex-end: Aligns items to the end of the flex container 
+       center: Aligns all the flex items to the center inside the flex container
+       space-between: Aligns items to the center of the main axis, with extra space placed between the items
+       space-around: Similar to space-between but the first and last items are not locked to the edges of the container
+    */
+
+    justify-content: center;
+
+    /* align-items property is used to align flex items along the cross axis.
+
+       flex-start: Aligns items to the start of the flex container 
+       flex-end: Aligns items to the end of the flex container
+       center: Align items to the center. For rows, this vertically aligns items (equal space above and below the items). 
+               For columns, this horizontally aligns them (equal space to the left and right of the items).
+       stretch: Stretch the items to fill the flex container 
+       baseline: Align items to their baselines
+    */
+
+    align-items: center;
+
+    /* flex-wrap property tells CSS to wrap items. This means extra items move into a new row or column.
+
+       nowrap: This is the default setting, and does not wrap items.
+       wrap: Wraps items from left-to-right if they are in a row, or top-to-bottom if they are in a column. 
+       wrap-reverse
+    */
+
+    flex-wrap: wrap;
+    
+}
+
+#box-1 {
+    background-color: dodgerblue;
+    width: 25%;
+    font-size: 30px;
+    order: 5;
+}
+
+#box-2 {
+    background-color: orangered;
+    width: 25%;
+    font-size: 40px;
+    order: 6;
+}
+
+#box-3 {
+    background-color: violet;
+    height: 50%;
+    width: 25%;
+    order: 1;
+}
+
+#box-4 {
+    background-color: yellow;
+    height: 50%;
+    width: 25%;
+    order: 2;
+}
+
+#box-5 {
+    background-color: green;
+    height: 50%;
+    width: 25%;
+    order: 3;
+}
+
+#box-6 {
+    background-color: black;
+    height: 50%;
+    width: 25%;
+    order: 4;
+}
+
+
+#box-container2 {
+    background: gray;
+    margin-top: 20px;
+    height: 400px;
+    display: flex;
+    align-items: flex-start;
+}
+
+#box1 {
+    background-color: dodgerblue;
+    height: 200px;
+    
+    /* flex property is used to set flex-grow,flex-shrink and flex-basis at the same time in that order. */
+    flex: 2 2 150px;
+
+    /* align-self accepts the same values as align-items and will override any value set by the align-items property. */
+    align-self: flex-end;
+}
+
+#box2 {
+    background-color: orangered;
+    height: 200px;
+    flex: 1 1 150px;
+}
