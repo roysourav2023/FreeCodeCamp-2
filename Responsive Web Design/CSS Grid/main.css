@@ -1,0 +1,109 @@
+.container {
+  font-size: 40px;
+  width: 100%;
+  background: black;
+
+  display: grid;
+
+  /* grid-template-columns, grid-template-rows define the columns and rows of grid 
+     This also decides the grid lines.    
+
+     repeat function can be used to specify the number of times ther column or row is to be repeated
+     
+     repeat has an auto-fill option which fills the row with as many columns as it can fit
+     repeat has another option auto-fit which fits the available columns into the space by expanding them so that they take up 
+     any available space
+
+     minmax(min. width,max. width) is used to limit the size of items when the grid container changes size
+  */
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: repeat(auto-fill,minmax(50px,100px));
+
+  /* grid-column-gap, grid-row-gap set the width of the space between the columns/rows.*/
+  /* The short hand notation for the two lines is 
+     grid-gap: 50px (rows) 50px (columns); or grid-gap: 50px (for both rows and columns)
+  */
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+
+  /* grid-template-areas creates a grid template using the names of the grid areas which are specified with the grid-area property.
+     The code below merges the top three cells together into an area named header, the bottom three cells into a footer area, and 
+     it makes two areas in the middle row; advert and content.
+
+     . is used to designate an empty cell on the grid
+  */
+  grid-template-areas:
+  "header header header"
+  "advert content content"
+  "footer footer footer";
+
+}
+
+.d1{
+    background:rgb(146, 205, 241);
+        
+    /* grid-column, grid-row are the shorthand for grid-column-start + grid-column-end, and grid-row-start + grid-row-end respectively.
+       grid-row: 2 (start-line) / 5 (end-line) 
+    */
+    grid-column: 1/3;
+    grid-row: 1;
+}
+.d2{
+    background:rgb(241, 161, 129);
+
+    /* justify-self is used to align the content's position within its cell horizontally.
+       start: Aligns the content at the left of the cell
+       center: Aligns the content in the center of the cell
+       end: aligns the content at the right of the cell  
+       stretch (default value) : Fills the whole width of the cell
+
+       To set horizontal alignment for all items to the same value, use justify-items in the container class
+    */
+
+    justify-self: center;
+}
+.d3{
+    background:rgb(169, 236, 236);
+
+    /* align-self is used to align the content's position within its cell vertically.
+       start: Aligns the content at the left of the cell
+       center: Aligns the content in the center of the cell
+       end: aligns the content at the right of the cell  
+       stretch (default value) : Fills the whole width of the cell
+
+        To set vertical alignment for all items to the same value, use align-items in the container class
+    */
+
+    align-self: end;
+}
+.d4{
+    background:rgb(252, 170, 182);
+}
+.d5{
+    background:rgb(159, 243, 159);
+    /* Gives an item a name so that it can be referenced by a template created with the grid-template-areas property.
+       grid-area: name (header/content/footer etc...) 
+
+       If the grid doesn't have an areas template to reference, the area can be created on the fly using 
+       grid-area: horizontal start line / vertical start line / horizontal end line / vertical end line 
+    */
+    grid-area: 4/1/5/4;
+}
+.d6{
+    background:rgb(243, 137, 123);
+}
+.d7 {
+    background:rgb(247, 14, 14);
+}
+
+.d8{
+    background:rgb(224, 18, 190);
+}
+
+.d9{
+    background:rgb(238, 118, 6);
+}
+
+
+
+
